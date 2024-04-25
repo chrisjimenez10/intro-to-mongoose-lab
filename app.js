@@ -182,7 +182,7 @@ const startApp = async () => {
     console.log(`Welcome ${username}, to the CRM`);
     let userReply;
 
-    //I have used while loops before, but not do...while - I couldn't get my if...else if statements to work with the UPDATE and DELETE CRUD operations, nor keep the application running after each action --> I asked Chat GPT "what am I doing wrong "
+    //I have used while loops before, but not do...while - I couldn't get my if...else if statements to work with the UPDATE and DELETE CRUD operations, nor keep the application running after each action --> I asked Chat GPT "what am I doing wrong with my if...else if statements that is not looping after each action on the database completes?" --> Response was that I didn't have any condition nor loop set up within an async function to keep looping after one action on the database was made (or errors), so it recommended using a do...while loop
     do {
         userReply = parseInt(menuSystemUI()); //Using parseInt because the input from the user will return as a string - If it's anything other than the cases below, it will resolve to the "default", but if it is one of the case numbers --> It needs to be converted to a number data type
 
